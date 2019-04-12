@@ -9,7 +9,8 @@ im = Image.open("image.jpg").convert('L')
 image = np.array(im)
 
 #f =.75 means that 75% of the image information is preserved
-f = np.random.uniform(.6,.80)
+f = np.random.uniform(.5,.80)
+print("compression factor f=",f)
 
 # use Singular value decomposition on the image matrix
 u,s,vt = np.linalg.svd(image,full_matrices=False)
